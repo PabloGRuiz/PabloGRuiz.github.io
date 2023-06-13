@@ -1,0 +1,104 @@
+section.skills{
+    background-color: #000000;
+    height: 100vh;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section.skills div.titles{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+section.skills div.titles h2.title-1{
+    color: #C69749;
+}
+
+section.skills div.titles h1.title-2{
+    color: #C69749;
+}
+
+section.skills div.list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    padding: 10px;
+}
+
+section.skills div.list p.name{
+    color: #C69749;
+}
+
+section.skills div.list div.skillconteiner{
+    background-color: #282A3A;
+    width: 35vw;
+    border-radius: 5px;
+}
+
+section.skills div.list div.skillconteiner div.skills{
+    text-align: right;
+    padding: 10px;
+    color: #000000;
+    font-weight: bold;
+}
+
+section.skills div.list div.skillconteiner div.html{
+    background-color: #C69749;
+    animation: fillhtml 2s forwards;
+    border-radius: 5px;
+}
+
+section.skills div.list div.skillconteiner div.css{
+    background-color: #C69749;
+    animation: fillcss 2s forwards;
+    border-radius: 5px;
+}
+
+section.skills div.list div.skillconteiner div.js{
+    background-color: #C69749;
+    animation: filljs 2s forwards;
+    border-radius: 5px;
+}
+
+section.skills div.list div.skillconteiner div.python{
+    background-color: #C69749;
+    animation: fillpython 2s forwards;
+    border-radius: 5px;
+}
+
+section.skills div.list div.skillconteiner div.java{
+    background-color: #C69749;
+    animation: filljava 2s forwards;
+    border-radius: 5px;
+}
+
+@keyframes fillhtml{
+    0%{width: 0;}
+    100%{width: 90%;}
+}
+
+@keyframes fillcss{
+    0%{width: 0;}
+    100%{width: 70%;}
+}
+
+@keyframes filljs{
+    0%{width: 0;}
+    100%{width: 75%;}
+}
+
+@keyframes fillpython{
+    0%{width: 0;}
+    100%{width: 60%;}
+}
+
+@keyframes filljava{
+    0%{width: 0;}
+    100%{width: 60%;}
+}

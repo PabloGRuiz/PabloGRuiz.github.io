@@ -1,0 +1,76 @@
+section.reachOut {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  section.reachOut form {
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  section.reachOut form h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  section.reachOut form label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  section.reachOut form input,
+  section.reachOut form textarea {
+    padding: 15px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background-color: #edfff0;
+    border: 2px solid #f0faf1;
+    color: #283629;
+    width: 100%;
+    outline: none;
+  }
+  
+  section.reachOut form input::placeholder,
+  section.reachOut form textarea::placeholder {
+    color: #b5cab6;
+  }
+  
+  section.reachOut form .btn {
+    font-size: 1rem;
+    color: white;
+    border: 0;
+    border-radius: 25px;
+    background-color: #51d94c;
+    box-shadow: 0 0 20px rgba(25, 254, 0, 0.4);
+    cursor: pointer;
+    padding: 15px 25px;
+    width: 100%;
+  }
+  
+  section.reachOut form .btn:hover {
+    background-color: #50e04b;
+  }
+  
+  @media (max-width: 991px) {
+    section.reachOut form {
+      padding: 20px;
+    }
+  
+    section.reachOut form h2 {
+      font-size: 2rem;
+    }
+  
+    section.reachOut form input,
+    section.reachOut form textarea {
+      padding: 10px;
+    }
+  }
+  

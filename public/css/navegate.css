@@ -1,0 +1,22 @@
+.navigationButtons {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  z-index: 9999;
+}
+
+.button {
+  display: block;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: rgba(50, 50, 50, 0.5);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:first-child {
+  margin-bottom: 10px;
+}

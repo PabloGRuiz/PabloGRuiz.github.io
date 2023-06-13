@@ -1,0 +1,46 @@
+section.education {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #40513B;
+  padding: 30px;
+  height: 100vh;
+}
+
+section.education h1.title {
+  color: #EDF1D6;
+  font-size: 3rem;
+  text-align: center;
+}
+
+section.education div.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: #609966;
+  border-radius: 5px;
+
+  width: 95vw;
+  height: 20vh;
+}
+
+section.education div.box:hover {
+  background-color: #9DC08B;
+  cursor: pointer;
+}
+
+section.education div.box h2.year {
+  font-size: 1rem;
+}
+
+section.education div.box h1.title {
+  color: #EDF1D6;
+  font-size: 1.5rem;
+}
+
+section.education div.box h2.institution {
+  font-size: 1rem;
+}
