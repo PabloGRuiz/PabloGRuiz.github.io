@@ -1,30 +1,61 @@
-// Obtenemos los elementos del DOM
-const prevButton = document.getElementById('prevButton');
-const nextButton = document.getElementById('nextButton');
+// Variables
+let secAct = 1;
 
-// Función para mover a la sección anterior
-const goToPreviousSection = () => {
-    const currentSection = document.querySelector('section:not([hidden])');
-    const previousSection = currentSection.previousElementSibling;
-    if (previousSection) {
-        currentSection.setAttribute('hidden', true);
-        previousSection.removeAttribute('hidden');
-        previousSection.scrollIntoView({ behavior: 'smooth' });
-    }
-};
+// Obtener los botones:
+let prevButton = document.getElementById("prevButton");
+let nextButton = document.getElementById("nextButton");
 
-// Función para mover a la siguiente sección
-const goToNextSection = () => {
-    const currentSection = document.querySelector('section:not([hidden])');
-    const nextSection = currentSection.nextElementSibling;
-    if (nextSection) {
-        currentSection.setAttribute('hidden', true);
-        nextSection.removeAttribute('hidden');
-        nextSection.scrollIntoView({ behavior: 'smooth' });
-    }
-};
+// Agregar event listeners
+prevButton.addEventListener("click", navigatePrevious);
+nextButton.addEventListener("click", navigateNext);
 
-// Asignamos los listeners a los botones
-prevButton.addEventListener('click', goToPreviousSection);
-nextButton.addEventListener('click', goToNextSection);
+// Funciones para los botones
 
+if (secAct === 1) {
+  prevButton.style.display = "none";
+}
+
+function navigatePrevious() {
+  secAct--;
+  if (secAct < 1) {
+    secAct = 1;
+  }
+  navigateToSection(secAct);
+  toggleNavigationButtons();
+}
+
+function navigateNext() {
+  secAct++;
+  if (secAct > 5) {
+    secAct = 5;
+  }
+  navigateToSection(secAct);
+  toggleNavigationButtons();
+}
+
+function toggleNavigationButtons() {
+  if (secAct === 1) {
+    prevButton.style.display = "none";
+  } else {
+    prevButton.style.display = "block";
+  }
+
+  if (secAct === 5) {
+    nextButton.style.display = "none";
+  } else {
+    nextButton.style.display = "block";
+  }
+}
+
+function navigateToSection(sectionId) {
+  let section = document.getElementById(sectionId.toString());
+  section.scrollIntoView({ behavior: "smooth" });
+}
+
+// Resetear la pagina
+
+window.addEventListener("load", function () {
+  setTimeout(function () {
+    window.scrollTo(0, 0);
+  }, 100);
+});
